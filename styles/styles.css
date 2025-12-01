@@ -1,0 +1,75 @@
+body {
+  padding: 0;
+  text-align: center;
+  background-color: #1d253b;
+}
+
+#game-intro {
+  padding: 20px 0;
+}
+
+#game-container {
+  display: flex;
+  display: none;
+  width: 100vw;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+#game-screen {
+  display: none;
+  align-content: center;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  background-image: url(/images/background.png);
+  background-size: cover;
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0 -100px;
+  }
+  95% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+#game-over {
+  display: none;
+}
+
+#game-intro p {
+  font-size: 22px;
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+}
+
+.logo-img {
+  width: 295px;
+  border-radius: 5px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.arrows-img {
+  width: 250px;
+}
+
+body button {
+  font-size: 40px;
+  background-color: #266e7b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #557793;
+}
