@@ -2,6 +2,7 @@ body {
   padding: 0;
   text-align: center;
   background-color: #1d253b;
+  background-image: url(/images/main-background.png);
 }
 
 #game-intro {
@@ -10,10 +11,15 @@ body {
 
 #game-container {
   display: flex;
-  display: none;
   width: 100vw;
   padding: 20px 0;
   justify-content: center;
+}
+
+#stats {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 30px;
 }
 
 #game-screen {
@@ -24,7 +30,7 @@ body {
   position: relative;
   background-image: url(/images/background.png);
   background-size: cover;
-  animation: slide 5s linear infinite;
+  animation: slide 3s linear infinite;
 }
 
 @keyframes slide {
@@ -35,7 +41,7 @@ body {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 50px;
+    background-position: 0 700px;
   }
 }
 
@@ -63,7 +69,7 @@ body button {
   font-size: 40px;
   background-color: #266e7b;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   margin-bottom: 20px;
