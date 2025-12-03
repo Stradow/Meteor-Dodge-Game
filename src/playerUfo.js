@@ -31,8 +31,8 @@ class PlayerUfo {
     if (this.top <= 0) {
       this.top = 0;
     }
-    if (this.top + this.height >= 800) {
-      this.top = 800 - this.height;
+    if (this.top + this.height >= 930) {
+      this.top = 930 - this.height;
     }
 
     this.updatePosition();

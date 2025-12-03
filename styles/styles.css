@@ -9,10 +9,6 @@ body {
   padding: 20px 0;
 }
 
-/* #end-screen {
-  padding: 20px 0;
-} */
-
 #game-container {
   display: flex;
   width: 100vw;
@@ -32,25 +28,45 @@ body {
   padding: 20px 0;
   overflow: hidden;
   position: relative;
+}
+#game-screen::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200%;
   background-image: url(/images/background.png);
+  background-repeat: repeat-y;
   background-size: cover;
-  animation: slide 3s linear infinite;
+  animation: spaceScroll 10s linear infinite;
 }
 
-@keyframes slide {
+@keyframes spaceScroll {
   0% {
-    background-position: 0 -100px;
-  }
-  95% {
-    background-position: 0 0;
+    transform: translateY(0);
   }
   100% {
-    background-position: 0 700px;
+    transform: translateY(-50%);
   }
 }
 
 #game-over {
   display: none;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+}
+
+#game-over img {
+  width: 295px;
+  border-radius: 5px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+#game-over h1 {
+  font-size: 2.5rem;
 }
 
 #game-intro p {
@@ -82,4 +98,17 @@ body button {
 button:hover {
   cursor: pointer;
   background-color: #557793;
+}
+
+.spin {
+  -webkit-animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
 }

@@ -1,14 +1,14 @@
 class Obstacles {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.possiblePosition = [310, 10];
+    this.possiblePosition = [380, 20];
     this.left =
       this.possiblePosition[
         Math.floor(Math.random() * this.possiblePosition.length)
       ];
     this.top = -200;
-    this.width = 200;
-    this.height = 260;
+    this.width = 160;
+    this.height = 160;
     this.directionX = 0;
     this.directionY = 0;
     this.element = document.createElement("img");
@@ -23,7 +23,7 @@ class Obstacles {
   }
 
   move() {
-    this.top += 3;
+    this.top += 4;
     this.updatePosition();
   }
   updatePosition() {

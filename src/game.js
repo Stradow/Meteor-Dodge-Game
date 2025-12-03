@@ -3,9 +3,9 @@ class Game {
     this.startScreen = document.getElementById("game-intro");
     this.gameScreen = document.getElementById("game-screen");
     this.endScreen = document.getElementById("game-over");
-    this.player = new PlayerUfo(this.gameScreen, 260, 500, 250, 250);
-    this.height = 700;
-    this.width = 500;
+    this.player = new PlayerUfo(this.gameScreen, 50, 900, 220, 180);
+    this.height = 900;
+    this.width = 550;
     this.obstacles = [new Obstacles(this.gameScreen)];
     this.score = 0;
     this.lives = 3;
@@ -59,7 +59,7 @@ class Game {
         }
       }
 
-      if (currentObstacle.top >= 610) {
+      if (currentObstacle.top >= 800) {
         currentObstacle.element.remove();
         this.obstacles.splice(i, 1);
         i--;

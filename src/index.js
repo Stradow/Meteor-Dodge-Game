@@ -13,16 +13,20 @@ window.onload = function () {
 
   window.addEventListener("keydown", (event) => {
     if (event.code === "ArrowLeft" || event.code === "KeyA") {
-      ourGame.player.directionX = -6;
+      ourGame.player.directionX = -8;
     }
     if (event.code === "ArrowRight" || event.code === "KeyD") {
-      ourGame.player.directionX = 6;
+      ourGame.player.directionX = 8;
     }
     if (event.code === "ArrowUp" || event.code === "KeyW") {
-      ourGame.player.directionY = -6;
+      ourGame.player.directionY = -8;
     }
     if (event.code === "ArrowDown" || event.code === "KeyS") {
-      ourGame.player.directionY = 6;
+      ourGame.player.directionY = 8;
+    }
+
+    if (event.code === "Space") {
+      ourGame.player.element.classList.add("spin");
     }
   });
 
@@ -38,6 +42,10 @@ window.onload = function () {
     }
     if (event.code === "ArrowDown" || event.code === "KeyS") {
       ourGame.player.directionY = 0;
+    }
+
+    if (event.code === "Space") {
+      ourGame.player.element.classList.remove("spin");
     }
   });
 
