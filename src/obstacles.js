@@ -12,7 +12,7 @@ class Obstacles {
     this.directionX = 0;
     this.directionY = 0;
     this.element = document.createElement("img");
-    this.element.src = `../images/meteor.png`;
+    this.element.src = `images/meteor.png`;
     this.element.style.position = "absolute";
     this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;

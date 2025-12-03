@@ -8,7 +8,7 @@ class PlayerUfo {
     this.directionX = 0;
     this.directionY = 0;
     this.element = document.createElement("img");
-    this.element.src = `../images/player.png`;
+    this.element.src = `images/player.png`;
     this.element.style.position = "absolute";
     this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
