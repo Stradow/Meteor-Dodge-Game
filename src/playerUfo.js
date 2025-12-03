@@ -21,6 +21,20 @@ class PlayerUfo {
   move() {
     this.left += this.directionX;
     this.top += this.directionY;
+
+    if (this.left <= 0) {
+      this.left = 0;
+    }
+    if (this.left + this.width >= 530) {
+      this.left = 530 - this.width;
+    }
+    if (this.top <= 0) {
+      this.top = 0;
+    }
+    if (this.top + this.height >= 800) {
+      this.top = 800 - this.height;
+    }
+
     this.updatePosition();
   }
   updatePosition() {

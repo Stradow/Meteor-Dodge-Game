@@ -1,3 +1,5 @@
+let ourGame;
+
 window.onload = function () {
   const startButton = document.getElementById("start-button");
   const restartButton = document.getElementById("restart-button");
@@ -5,10 +7,42 @@ window.onload = function () {
   startButton.addEventListener("click", function () {
     startGame();
   });
+  restartButton.addEventListener("click", function () {
+    window.location.reload();
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.code === "ArrowLeft" || event.code === "KeyA") {
+      ourGame.player.directionX = -6;
+    }
+    if (event.code === "ArrowRight" || event.code === "KeyD") {
+      ourGame.player.directionX = 6;
+    }
+    if (event.code === "ArrowUp" || event.code === "KeyW") {
+      ourGame.player.directionY = -6;
+    }
+    if (event.code === "ArrowDown" || event.code === "KeyS") {
+      ourGame.player.directionY = 6;
+    }
+  });
+
+  window.addEventListener("keyup", (event) => {
+    if (event.code === "ArrowLeft" || event.code === "KeyA") {
+      ourGame.player.directionX = 0;
+    }
+    if (event.code === "ArrowRight" || event.code === "KeyD") {
+      ourGame.player.directionX = 0;
+    }
+    if (event.code === "ArrowUp" || event.code === "KeyW") {
+      ourGame.player.directionY = 0;
+    }
+    if (event.code === "ArrowDown" || event.code === "KeyS") {
+      ourGame.player.directionY = 0;
+    }
+  });
 
   function startGame() {
-    console.log("start game");
-    const ourGame = new Game();
+    ourGame = new Game();
     ourGame.start();
   }
 };
