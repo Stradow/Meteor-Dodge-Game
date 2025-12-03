@@ -2,7 +2,7 @@ body {
   padding: 0;
   text-align: center;
   background-color: #1d253b;
-  background-image: url(/images/main-background.png);
+  background-image: url(../images/main-background.png);
 }
 
 #game-intro {
